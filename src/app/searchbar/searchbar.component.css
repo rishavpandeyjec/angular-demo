@@ -1,0 +1,23 @@
+.topelement{
+   display: inline-block;
+
+
+}
+
+.top{
+
+  height: 9.57%;
+  width: 100%;
+  background-color:  rgba(168, 167, 167, 0.2);
+}
+.searchbar{
+  position: absolute;
+  height: 5.664%;
+  width: 48.05%;
+  background-color:white;
+  border: 1px solid #f2f2f2;
+  border-radius: 20px;
+
+  top: 4.953%;
+  left: 45.138%;
+}

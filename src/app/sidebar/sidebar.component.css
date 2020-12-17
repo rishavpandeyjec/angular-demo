@@ -1,0 +1,40 @@
+
+.side-menu{
+  position: absolute;
+  width: 20.13%;
+
+  background-color: rgba(224,224,224,0.2);
+  list-style: none;
+  border: 1px #ddd solid;
+  border-radius: 10px;
+  padding:15px;
+}
+
+.side-menu li{
+  font-size: 16px;
+  line-height: 2.4em;
+  border-bottom: dotted 1px #ddd;
+}
+
+.side-menu li ul{
+
+  list-style: none;
+
+}
+
+.side-menu li ul li{
+  font-size: 12px;
+  text-indent: 1%;
+}
+
+.side-menu li ul li:last-child{
+  border: none;
+}
+
+.side-menu li ul li:hover{
+  background-color: #dde;
+}
+
+.side-menu li ul li:active{
+  background-color: #dde;
+}

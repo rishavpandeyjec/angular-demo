@@ -1,0 +1,33 @@
+section{
+  position: absolute;
+  width: 31.11%;
+  height:43.06%;
+  top: 33.92%;
+  left: 63.61%;
+  background-color: #ffffff;
+  border: 1px solid #f2f2f2;
+
+}
+
+.top{
+  position: absolute;
+  background-color:  rgba(224,224,224,0.2);
+  height: 28.32%;
+  width:100%;
+  top: 0px;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.bottom{
+  position: absolute;
+  background-color: rgba(224,224,224,0.2);
+  height: 18.32%;
+  width:100%;
+  bottom: 0px;
+  border-top: 1px solid #f2f2f2;
+
+}
+
+.clickable:hover{
+  color: blueviolet;
+}

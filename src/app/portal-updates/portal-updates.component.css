@@ -1,0 +1,23 @@
+section{
+  position: absolute;
+  width: 69.23%;
+  height:9.08%;
+  top: 20.10%;
+  left: 27.29%;
+  background-color: #ffffff;
+  border: 3px dotted #f2f2f2;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+
+}
+.inline{
+  display: inline-block;
+}
+.seedetails{
+  background-color: #f2f2f2;
+}
+
+.seedetails:hover{
+  color:blueviolet;
+  background-color: blanchedalmond;
+}
