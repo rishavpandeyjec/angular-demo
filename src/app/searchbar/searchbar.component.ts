@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-searchbar',
@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchbarComponent implements OnInit {
 
-  mylocation='My Portal';
+  myLocation='';
+
+  @Output()
+  updatePage=new EventEmitter<number>();
 
   constructor() { }
+
+
+  onClickingBell(){
+    this.updatePage.emit(2);
+  }
 
   ngOnInit(): void {
   }

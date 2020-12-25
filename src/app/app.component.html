@@ -1,7 +1,9 @@
-<app-searchbar #searchBar ></app-searchbar>
-<app-sidebar #sidebar (pageChangeEvent)="updateMyLocation($event)"></app-sidebar>
-<app-your-projects [hidden]="sidebar.pageToShow!==1"></app-your-projects>
-<app-your-worklist [hidden]="sidebar.pageToShow!==1"></app-your-worklist>
-<app-your-report [hidden]="sidebar.pageToShow!==1"></app-your-report>
-<app-portal-updates [hidden]="sidebar.pageToShow!==1"></app-portal-updates>
-<app-reports [hidden]="sidebar.pageToShow!==3"></app-reports>
+<app-searchbar #searchBar (updatePage)="changePageTo($event)"></app-searchbar>
+<app-sidebar #sideBar (updatePage)="changePageTo($event)"></app-sidebar>
+<app-your-projects #yourProjects (updatePage)="changePageTo($event)" [hidden]="sideBar.pageToShow!==1"></app-your-projects>
+<app-your-worklist #yourWorklist (updatePage)="changePageTo($event)" [hidden]="sideBar.pageToShow!==1"></app-your-worklist>
+<app-your-report #yourReport (updatePage)="changePageTo($event)" [hidden]="sideBar.pageToShow!==1"></app-your-report>
+<app-portal-updates #portalUpdates [hidden]="sideBar.pageToShow!==1"></app-portal-updates>
+<app-reports #reports [hidden]="sideBar.pageToShow!==3"></app-reports>
+<app-projects #projects [hidden]="sideBar.pageToShow!==4"></app-projects>
+<app-messages #messages [hidden]="sideBar.pageToShow!==2"></app-messages>

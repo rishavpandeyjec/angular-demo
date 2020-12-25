@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-your-worklist',
@@ -7,7 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class YourWorklistComponent implements OnInit {
 
+  pageNumber=1;
   constructor() { }
+
+  @Output()
+  updatePage=new EventEmitter();
+
+  onClickingViewWorklist(){
+    this.updatePage.emit(5);
+  }
 
   ngOnInit(): void {
   }

@@ -1,3 +1,4 @@
+import { SidebarComponent } from './sidebar/sidebar.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
 import { Component, OnInit, ViewChild } from '@angular/core';
 
@@ -7,20 +8,55 @@ import { Component, OnInit, ViewChild } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-  title = 'angular-practice';
 
   @ViewChild('searchBar',{static:true})
-  searchbar: SearchbarComponent;
+  searchBar: SearchbarComponent;
+
+
+  @ViewChild('sideBar',{static:true})
+  sideBar:SidebarComponent;
+
 
 
   constructor(){
-    this.searchbar=new SearchbarComponent();
+
+    this.searchBar=new SearchbarComponent();
+    this.sideBar=new SidebarComponent();
+
   }
 
-  updateMyLocation(event: string){
-    this.searchbar.mylocation='My Portal';
-     this.searchbar.mylocation+=event;
+
+  changePageTo(pageNumber:number){
+
+    this.sideBar.pageToShow=pageNumber;
+    if(pageNumber===1)
+    {
+         this.searchBar.myLocation='>>Home';
+    }
+    else if(pageNumber===2)
+    {
+         this.searchBar.myLocation='>>Messages';
+    }
+    else if(pageNumber===3)
+    {
+         this.searchBar.myLocation='>>Reports';
+    }
+    else if(pageNumber===4)
+    {
+         this.searchBar.myLocation='>>Home>>Projects';
+    }
+    else if(pageNumber===5)
+    {
+         this.searchBar.myLocation='>>Home>>Worklist';
+    }
+    else
+    {
+
+    }
   }
+
+
+
   ngOnInit(): void{
 
   }

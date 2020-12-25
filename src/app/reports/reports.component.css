@@ -37,10 +37,14 @@ color: #651FA7;
   background-color:#f2f2f2;
 
 }
-.inline2:hovers{
+.inline2:hover{
   background-color:#d8d7d7 ;
 }
 
 a{
   text-decoration: none;
+}
+
+.searchbar:focus{
+  outline: none;
 }

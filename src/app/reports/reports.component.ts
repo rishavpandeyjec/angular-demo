@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReportsComponent implements OnInit {
 
+  pageNumber=3;
   constructor() { }
 
   ngOnInit(): void {

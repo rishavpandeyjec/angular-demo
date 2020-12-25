@@ -8,35 +8,25 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
-  pageToShow=3;
-
-  whereAmI='';
+  pageToShow=0;
 
   @Output()
-  pageChangeEvent = new EventEmitter();
+  updatePage=new EventEmitter<number>();
 
   constructor() { }
 
-  onSelection(x : number){
-     this.pageToShow=x;
-     if(x===1)
-     {
-       this.whereAmI='>>Home';
-     }
-     else if(x===2)
-     {
-      this.whereAmI='>>Messages';
-     }
-     else if(x===3)
-     {
-      this.whereAmI='>>Reports';
-     }
-     else
-     {
-
-     }
-     this.pageChangeEvent.emit(this.whereAmI);
+  onClickingHome(){
+     this.updatePage.emit(1);
   }
+
+  onClickingMessages(){
+    this.updatePage.emit(2);
+  }
+
+  onClickingReports(){
+    this.updatePage.emit(3);
+  }
+
 
   ngOnInit(): void {
   }

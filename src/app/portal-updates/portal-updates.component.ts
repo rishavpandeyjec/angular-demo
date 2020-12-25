@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortalUpdatesComponent implements OnInit {
 
+  pageNumber=1;
   constructor() { }
 
   ngOnInit(): void {
